@@ -9,15 +9,13 @@ func cleanup() {
 	log.Println("cleanup.")
 }
 
-func validate() error {
+func run() error {
 	return errors.New("validation error.")
 }
 
 func main() {
 	defer cleanup()
-	log.Println("start.")
-	if err := validate(); err != nil {
+	if err := run(); err != nil {
 		log.Fatal(err)
 	}
-	log.Println("end.")
 }
