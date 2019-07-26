@@ -1,12 +1,24 @@
 package main
 
 import (
+	"errors"
 	"fmt"
-	"os"
+	"log"
 )
 
+func cleanup() {
+	fmt.Println("cleanup.")
+}
+
+func validate() error {
+	return errors.New("validation error.")
+}
+
 func main() {
-	defer fmt.Println("DONE.")
-	fmt.Println("OK.")
-	os.Exit(1)
+	defer cleanup()
+	fmt.Println("start")
+	if err := validate(); err != nil {
+		log.Fatal(err)
+	}
+	fmt.Println("end")
 }
