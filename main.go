@@ -2,12 +2,11 @@ package main
 
 import (
 	"errors"
-	"fmt"
 	"log"
 )
 
 func cleanup() {
-	fmt.Println("cleanup.")
+	log.Println("cleanup.")
 }
 
 func validate() error {
@@ -16,9 +15,9 @@ func validate() error {
 
 func main() {
 	defer cleanup()
-	fmt.Println("start")
+	log.Println("start.")
 	if err := validate(); err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println("end")
+	log.Println("end.")
 }

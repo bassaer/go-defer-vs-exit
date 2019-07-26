@@ -2,7 +2,7 @@
 
 ```
 ❯ go run main.go
-start
-2019/07/27 03:35:49 validation error.
+2019/07/27 03:39:16 start.
+2019/07/27 03:39:16 validation error.
 exit status 1
 ```
